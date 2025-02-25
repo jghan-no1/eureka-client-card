@@ -14,6 +14,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
+
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -159,6 +161,18 @@ public class CardsController {
                     .status(HttpStatus.EXPECTATION_FAILED)
                     .body(new ResponseDto(CardsConstants.STATUS_417, CardsConstants.MESSAGE_417_DELETE));
         }
+    }
+
+    private final Environment environment;
+    public CardsController(Environment environment) {
+        this.environment = environment;
+    }
+
+//     @SuppressWarnings("static-access")
+    @GetMapping("/card/pod-name")
+    public String getPodName() {
+        String podName = environment.getProperty("HOSTNAME");
+        return podName;
     }
 
 }
