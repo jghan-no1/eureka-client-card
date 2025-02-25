@@ -5,7 +5,7 @@ metadata:
   name: team6-eureka-client-card
   namespace: group1-team6
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: team6-eureka-client-card

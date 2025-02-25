@@ -15,6 +15,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -164,6 +165,7 @@ public class CardsController {
     }
 
     private final Environment environment;
+    @Autowired
     public CardsController(Environment environment) {
         this.environment = environment;
     }
