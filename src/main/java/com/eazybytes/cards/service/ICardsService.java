@@ -31,4 +31,6 @@ public interface ICardsService {
      */
     boolean deleteCard(String mobileNumber);
 
+    String getLoanHostName();
+
 }

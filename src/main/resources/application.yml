@@ -1,6 +1,11 @@
 server:
-  port: 9000
+  port: 9207
+
 spring:
+  profiles:
+    active: "local"
+  application:
+    name: "cards"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -14,18 +19,28 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  application:
-    name: jghan-cards
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      access: unrestricted
+  info:
+    env:
+      enabled: true
 
 eureka:
   instance:
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 30
     preferIpAddress: true
-    hostname: ${HOSTNAME}
   client:
     fetchRegistry: true
     registerWithEureka: true
-    serviceUrl:
-      # defaultZone: http://eureka-server:8761/eureka/
-      defaultZone: http://team6-eureka-server:8761/eureka/
+
+info:
+  app:
+    name: "cards"
+    description: "Eazy Bank Cards Application"
+    version: "1.0.0"
