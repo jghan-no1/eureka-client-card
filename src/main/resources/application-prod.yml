@@ -1,6 +1,6 @@
 spring:
   config:
-    import: "optional:configserver:http://team6-eureka-client-config-server:8762/"
+    import: "optional:configserver:http://team6-config-server:8762/"
 
 
 eureka:
