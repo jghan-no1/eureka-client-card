@@ -2,24 +2,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: team6-eureka-client-card
+  name: team6-eureka-client-cards
   namespace: group1-team6
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: team6-eureka-client-card
+      app: team6-eureka-client-cards
   template:
     metadata:
       labels:
-        app: team6-eureka-client-card
+        app: team6-eureka-client-cards
     spec:
       containers:
-      - name: team6-eureka-client-card
-        image: k8s-vga-worker1:5000/group1-team6-eureka-client-card
+      - name: team6-eureka-client-cards
+        image: k8s-vga-worker1:5000/group1-team6-eureka-client-cards
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 9000
+        - containerPort: 9207
 ---
 # apiVersion: v1
 # kind: Service

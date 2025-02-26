@@ -1,11 +1,14 @@
+build:
+  version: 1.0.0
+
 server:
   port: 9207
 
 spring:
   profiles:
-    active: "local"
+    active: "prod"
   application:
-    name: "cards"
+    name: "cards-jghan"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -34,17 +37,15 @@ management:
 
 eureka:
   instance:
+    # lease-renewal-interval-in-seconds: 10
+    # lease-expiration-duration-in-seconds: 30
     preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 30
-    hostname: ${HOSTNAME}
+    # hostname: ${HOSTNAME}
   client:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      # defaultZone: http://eureka-server:8761/eureka/
       defaultZone: http://team6-eureka-server:8761/eureka/
-
 
 info:
   app:
