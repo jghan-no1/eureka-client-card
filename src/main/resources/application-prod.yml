@@ -1,4 +1,8 @@
 spring:
+  cloud:
+    config:
+      name: "cards"
+      profile: "prod"
   config:
     import: "optional:configserver:http://team6-config-server:8762/"
 

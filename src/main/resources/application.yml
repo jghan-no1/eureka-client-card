@@ -8,7 +8,7 @@ spring:
   profiles:
     active: "prod"
   application:
-    name: "cards-jghan"
+    name: "cards"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
