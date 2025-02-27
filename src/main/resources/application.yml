@@ -6,7 +6,7 @@ server:
 
 spring:
   profiles:
-    active: "prod"
+    active: "local"
   application:
     name: "cards"
   datasource:
