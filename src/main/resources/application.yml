@@ -37,8 +37,8 @@ management:
 
 eureka:
   instance:
-    # lease-renewal-interval-in-seconds: 10
-    # lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
     preferIpAddress: true
     # hostname: ${HOSTNAME}
   client:
