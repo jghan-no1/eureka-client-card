@@ -13,7 +13,7 @@ import com.eazybytes.cards.exception.ResourceNotFoundException;
 import com.eazybytes.cards.mapper.CardsMapper;
 import com.eazybytes.cards.repository.CardsRepository;
 import com.eazybytes.cards.service.ICardsService;
-import com.eazybytes.cards.service.client.LoanFeignClient;
+// import com.eazybytes.cards.service.client.LoanFeignClient;
 
 import lombok.AllArgsConstructor;
 
@@ -22,7 +22,7 @@ import lombok.AllArgsConstructor;
 public class CardsServiceImpl implements ICardsService {
 
     private CardsRepository cardsRepository;
-    private LoanFeignClient loanFeignClient;
+    // private LoanFeignClient loanFeignClient;
 
     /**
      * @param mobileNumber - Mobile Number of the Customer
@@ -92,8 +92,8 @@ public class CardsServiceImpl implements ICardsService {
         return true;
     }
 
-    @Override
-    public String getLoanHostName() {
-        return loanFeignClient.getLoanHostName().getBody();
-    }
+    // @Override
+    // public String getLoanHostName() {
+    //     return loanFeignClient.getLoanHostName().getBody();
+    // }
 }

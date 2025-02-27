@@ -273,9 +273,9 @@ public class CardsController {
         return ResponseEntity.status(HttpStatus.OK).body(hostName);
     }
 
-    @GetMapping("/getLoanHostName")
-    public ResponseEntity<String> getLoanHostName() {
-        return ResponseEntity.status(HttpStatus.OK).body(iCardsService.getLoanHostName());
-    }
+//     @GetMapping("/getLoanHostName")
+//     public ResponseEntity<String> getLoanHostName() {
+//         return ResponseEntity.status(HttpStatus.OK).body(iCardsService.getLoanHostName());
+//     }
 
 }
